@@ -2,11 +2,11 @@
 # the function takes a nth input then outputs the nth number in the fib sequence.
 
 def fibonacci(n):
-    if n <= 0:
+    if n < 0:
         return ("error")
-    elif n==1:
-        return 0
-    elif n==2:
+    elif n < 2:
+        return n
+    elif n == 2:
         return 1
     else:
         return fibonacci(n-1)+fibonacci(n-2)
@@ -26,5 +26,14 @@ def lucas(n):
 
 # sum_series function
 
-def sum_series(a,b,c):
-    pass
+def sum_series(n,a=0,b=1):
+    for i in range(n):
+        a,b = b,a+b 
+    return a
+
+
+def sum_seriesone(n,a=0,b=1):
+    if a == 0:
+       return fibonacci(n)
+    elif a == 2:
+       return lucas(n)
