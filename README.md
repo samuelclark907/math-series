@@ -1,0 +1,1 @@
+https://github.com/samuelclark907/math-series/pull/1
